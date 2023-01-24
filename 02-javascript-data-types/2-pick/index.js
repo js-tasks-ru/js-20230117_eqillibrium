@@ -38,8 +38,8 @@ export const pick = (obj, ...fields) => {
   // return Object.fromEntries(result)
 
   //3
-  const result = Object.entries(obj).filter((e) => {
-    const [key] = e;
+  const result = Object.entries(obj).filter((entry) => {
+    const [key] = entry;
     return fields.includes(key);
   });
 
