@@ -20,12 +20,12 @@ export function createGetter(path) {
   function recursive (target) {
     keys.forEach((key, idx, keys) => {
       if (utils.isObject(target) &&
-        target.hasOwnProperty(key) &&
+        Object.hasOwn(target, key) &&
         utils.isObject(target[key]) &&
         !utils.isLastElem(idx, keys)) {
         recursive(target[key]);
       }
-      if (target.hasOwnProperty(key) &&
+      if (Object.hasOwn(target, key) &&
         utils.isLastElem(idx, keys)) {
         result = target[key];
       }
