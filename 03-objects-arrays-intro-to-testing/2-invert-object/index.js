@@ -7,7 +7,7 @@ export function invertObj(obj) {
   if (!obj) {
     //Вернул напрямую undefined, потому что только так тесты проходили
     //Бросал exception, error, возвращал пустой объект - не помогало пройти тест
-    return undefined;
+    return obj;
   }
   const entries = Object.entries(obj);
   const array = entries.map(entry => entry.reverse());
