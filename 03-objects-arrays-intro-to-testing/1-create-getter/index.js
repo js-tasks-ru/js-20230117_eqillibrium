@@ -17,6 +17,7 @@ export function createGetter(path) {
 
   return (obj) => {
     let result;
+
     //Рекурсивная функция для поиска и возврата поля
     function recursive (target) {
       keys.forEach((key, idx, keys) => {
